@@ -1,5 +1,8 @@
 import { MouseEventHandler } from "react";
 
+
+
+
 export interface CustomButonProps {
     title: string;
     containerStyles?: string;
@@ -31,6 +34,10 @@ export interface CarProps {
     transmission: string;
     year: number;
 }
+
+
+export type CarState = CarProps[];
+
 
 
 export interface FilterProps {
