@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Navbar, Footer } from "@/components";
 import "./globals.css";
 import { ThemeProvider } from '../context/ThemeContext'; 
-// import Preloader from "@/components/Preloader"; // Make sure the path to your Preloader component is correct
 
 export const metadata: Metadata = {
   title: "CarHub",
@@ -20,8 +19,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.png" /> 
       </head>
       <body className="relative">
-        <ThemeProvider>
-          {/* <Preloader />  Add the Preloader component here */}
+        <ThemeProvider> 
           <Navbar />
           {children}
           <Footer />

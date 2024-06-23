@@ -5,7 +5,7 @@ import React from 'react';
 import CustomButton from "./CustomButton";
 
 const Hero = () => {
-    const handleScroll = (id) => {
+    const handleScroll = (id: string) => {
         const element = document.getElementById(id);
         if (element) {
             element.scrollIntoView({ behavior: 'auto' });

@@ -8,7 +8,7 @@ import { footerLinks } from '@/constants'
 const Footer = () => {
 
 
-    const handleScroll = (id) => {
+    const handleScroll = (id: string) => {
         const element = document.getElementById(id);
         if (element) {
             element.scrollIntoView({ behavior: 'auto' });

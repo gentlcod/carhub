@@ -41,11 +41,15 @@ export default function Home() {
     }
   };
 
+
+
   useEffect(() => {
     getCars();
   }, [fuel, year, limit, manufacturer, model]);
 
   return (
+    <>
+    
     <main className="overflow-hidden">
       <Hero />
 
@@ -100,5 +104,7 @@ export default function Home() {
         )}
       </div>
     </main>
+    </>
   );
+  
 }

@@ -1,8 +1,7 @@
-"use client";
+'use client'
 
-import React, { useState, useEffect } from 'react';
-// import { generateCarImageUrl } from '@/utils';
-import { calculateCarRent } from '@/utils';
+import React, { useState } from 'react';
+import { calculateCarRent } from '@/utils'; // Adjust import path as per your project structure
 import { CarProps } from '@/types';
 import Image from 'next/image';
 import { CustomButton } from '.';
@@ -12,24 +11,16 @@ interface CarCardProps {
   car: CarProps;
 }
 
-const CarCard = ({ car }: CarCardProps) => {
+const CarCard = ({ car } : CarCardProps) => {
   const { city_mpg, year, make, model, transmission, drive } = car;
   const [isOpen, setIsOpen] = useState(false);
 
-  const carRent = Math.round(calculateCarRent(city_mpg, year));
+  // Ensure city_mpg and year are treated as numbers
+  const cityMpgNumber = typeof city_mpg === 'string' ? parseInt(city_mpg) : city_mpg;
+  const yearNumber = typeof year === 'string' ? parseInt(year) : year;
 
-
-  // if you using api car images fetch it here
-
-
-  // useEffect(() => {
-  //   const fetchImageUrl = async () => {
-  //     const url = await generateCarImageUrl(car);
-  //     setImageUrl(url);
-  //   };
-
-  //   fetchImageUrl();
-  // }, [car]);
+  // Calculate car rent based on city_mpg and year
+  const carRent = calculateCarRent(city_mpg, year)
 
   return (
     <div className="car-card group">
@@ -87,7 +78,7 @@ const CarCard = ({ car }: CarCardProps) => {
               alt="gas"
             />
             <p className="text-[14px] text-primary">
-              {city_mpg} MPG
+              {cityMpgNumber} MPG
             </p>
           </div>
         </div>
