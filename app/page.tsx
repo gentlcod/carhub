@@ -94,7 +94,7 @@ export default function Home() {
         ) : (
           !loading && (
             <div className='home__error-container'>
-              <h2 className='text-black text-xl font-bold'>Oops, no results</h2>
+              <h2 className='text-primary text-xl font-bold'>Oops, no results</h2>
               <p>{allCars?.message}</p>
             </div>
           )
