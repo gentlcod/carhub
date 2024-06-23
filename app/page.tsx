@@ -6,7 +6,7 @@ import Image from "next/image";
 import { fetchCars } from "@/utils";
 import { fuels, yearsOfProduction } from "@/constants";
 import { CarCard, ShowMore, SearchBar, CustomFilter, Hero } from "@/components";
-import { CarState } from "@/types"; // Import CarState from types
+import { CarState } from "@/types";
 
 export default function Home() {
   const [allCars, setAllCars] = useState<CarState>([]);
@@ -60,8 +60,9 @@ export default function Home() {
           <SearchBar setManuFacturer={setManuFacturer} setModel={setModel} />
 
           <div className='home__filter-container'>
-            <CustomFilter options={fuels} setFilter={setFuel} />
-            <CustomFilter options={yearsOfProduction} setFilter={setYear} />
+          <CustomFilter title="Fuel Type" options={fuels} setFilter={setFuel} />
+          <CustomFilter title="Year of Production" options={yearsOfProduction} setFilter={setYear} />
+
           </div>
         </div>
 
