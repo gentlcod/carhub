@@ -71,7 +71,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                       />
                     </div>
 
-                    <div className="flex lg:gap-16 gap-7 lg:ml-5">
+                    <div className="flex lg:gap-16 gap-1 ml-1 lg:ml-5">
                       <Image src='/hero1.png'  width={100} height={90} alt='car '/>
                       <Image src='/hero2.png' width={100} height={90}  alt='car '/>
                       <Image src='/hero3.png' width={100} height={90}  alt='car '/>
